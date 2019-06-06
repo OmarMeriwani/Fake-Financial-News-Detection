@@ -18,11 +18,30 @@ for i in range(0,len(df)):
     text = str(text).replace('\\n','')
     '''Remove NER'''
 
-    newSentence = re.sub("\$[A-Z]+", " ", str(text))
+    newSentence = str(text)
+    ns = []
+
+    #newSentence = ' '.join([i for i in str(text).split(' ') if i[0] != '$' and len(i) > ])
+    for i in newSentence.split(' '):
+
+        if len(i) <= 1:
+            ns.append(i)
+            continue
+        if i[0] != '$':
+            ns.append(i)
+            continue
+        else:
+            if (i[1].isalpha() == True):
+                ns.append('#NER')
+            else:
+                #print(i)
+                ns.append(i)
+    newSentence = ' '.join(ns)
+    #newSentence = re.sub(r'\$[A-Z][A-Z][A-Z][A-Z] ', " ", newSentence)
     newSentence = re.sub(" [A-Z]{2}[A-Z]+ ", " ", newSentence)
 
     '''Lower case'''
-    newSentence = ' '.join( [t.strip().lower() for t in str(text).split(' ')])
+    newSentence = ' '.join( [t.strip().lower()  for t in newSentence.split(' ') ])
 
     '''Remove double spaces'''
     newSentence = newSentence.replace('  ','')
@@ -33,7 +52,7 @@ for i in range(0,len(df)):
     '''Remove special characters'''
     newSentence = newSentence.translate(str.maketrans('', '', string.punctuation))
     '''Remove numbers'''
-    newSentence = re.sub("\d+\$|\d+", " ", newSentence)
+    #newSentence = re.sub("\d+\$|\d+", " ", newSentence)
     '''Remove multiple spaces'''
     newSentence = re.sub(' +', ' ',newSentence)
     print('AFTER',newSentence)
