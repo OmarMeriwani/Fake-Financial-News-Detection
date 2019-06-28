@@ -43,6 +43,7 @@ print(y_test.shape)
 #Use ANN
 mlp = MLPClassifier(activation='tanh', hidden_layer_sizes=(20,20,20))
 mlp.fit(x_train,y_train)
+
 #pickle.dump(mlp, open('MLPClassifier20.sav', 'wb'))
 score = mlp.score(x_test, y_test)
 print(score)
