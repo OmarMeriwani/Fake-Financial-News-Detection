@@ -10,11 +10,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="238">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/News-classification/TF-With-2ND-Dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="64" column="88" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="88" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -25,8 +37,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Datasets Preparation/MainNER.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-end-line="8" />
+            <state relative-caret-position="17">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Citations/Features.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -35,21 +59,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sentiments/sentimentSentic.py">
+        <entry file="file://$PROJECT_DIR$/Citations/verbsynonyms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sentiments/lexicalFeatures.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" selection-start-line="11" selection-end-line="14" />
+            <state relative-caret-position="119">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Time Analysis/timeprocessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state>
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -121,6 +135,17 @@
       <find>:</find>
       <find>AM</find>
       <find>timex</find>
+      <find>vocabulary</find>
+      <find>'O'</find>
+      <find>scnlp.pos_tag</find>
+      <find>nnp_preceeded_by_colon 1</find>
+      <find>verb</find>
+      <find>says</find>
+      <find>Say</find>
+      <find>SayVerb</find>
+      <find>sayverb</find>
+      <find>'says</find>
+      <find>say</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -134,14 +159,18 @@
         <option value="$PROJECT_DIR$/Sentiments/sentimentSentic.py" />
         <option value="$PROJECT_DIR$/Sentiments/lexicalFeatures.py" />
         <option value="$PROJECT_DIR$/Time Analysis/timeprocessor.py" />
-        <option value="$PROJECT_DIR$/Datasets Preparation/MainNER.py" />
         <option value="$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py" />
+        <option value="$PROJECT_DIR$/News-classification/TF-With-2ND-Dataset.py" />
+        <option value="$PROJECT_DIR$/Datasets Preparation/MainNER.py" />
+        <option value="$PROJECT_DIR$/Citations/verb-synonyms.py" />
+        <option value="$PROJECT_DIR$/Citations/verbsynonyms.py" />
+        <option value="$PROJECT_DIR$/Citations/Features.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="20" />
+    <option name="x" value="169" />
+    <option name="y" value="282" />
     <option name="width" value="1400" />
     <option name="height" value="830" />
   </component>
@@ -162,12 +191,22 @@
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Citations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
               <item name="Datasets Preparation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
               <item name="News-classification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Sentiments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
@@ -181,7 +220,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Named Entity Recognition" />
+    <property name="last_opened_file_path" value="D:/PartsApplicationAngular/PartsApplicationAngular" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -206,7 +245,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FinancialNewsClassifier">
+  <component name="RunManager" selected="Python.Features">
+    <configuration name="Features" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fake-Financial-News-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Citations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Citations/Features.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FinancialNewsClassifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fake-Financial-News-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -249,7 +309,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lexicalFeatures" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TF-With-2ND-Dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fake-Financial-News-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -257,11 +317,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sentiments" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/News-classification" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sentiments/lexicalFeatures.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/News-classification/TF-With-2ND-Dataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -270,7 +330,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sentimentSentic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="verb-synonyms" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fake-Financial-News-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,32 +338,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sentiments" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Citations" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sentiments/sentimentSentic.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="timeprocessor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fake-Financial-News-Detection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Time Analysis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Time Analysis/timeprocessor.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations\verbsynonyms.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -313,19 +352,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.lexicalFeatures" />
-      <item itemvalue="Python.sentimentSentic" />
-      <item itemvalue="Python.timeprocessor" />
       <item itemvalue="Python.MainNER" />
       <item itemvalue="Python.FinancialNewsClassifier" />
+      <item itemvalue="Python.TF-With-2ND-Dataset" />
+      <item itemvalue="Python.Features" />
+      <item itemvalue="Python.verb-synonyms" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FinancialNewsClassifier" />
+        <item itemvalue="Python.Features" />
+        <item itemvalue="Python.verb-synonyms" />
         <item itemvalue="Python.MainNER" />
-        <item itemvalue="Python.timeprocessor" />
-        <item itemvalue="Python.lexicalFeatures" />
-        <item itemvalue="Python.sentimentSentic" />
+        <item itemvalue="Python.TF-With-2ND-Dataset" />
+        <item itemvalue="Python.FinancialNewsClassifier" />
       </list>
     </recent_temporary>
   </component>
@@ -346,12 +385,12 @@
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29884318" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30655527" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28647214" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3183024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39920425" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -405,28 +444,67 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sentiments/SSIX News headlines Gold Standard EN.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Sentiments/EnglishGS.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="40" lean-forward="true" selection-end-line="1" />
         </state>
       </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sentiments/lexicalFeatures.py">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/spacy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/sre_parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="541" column="38" lean-forward="true" selection-start-line="541" selection-start-column="38" selection-end-line="541" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysyntime/model/TimeSegment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles5k2.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state>
+          <caret column="56" selection-start-column="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/sklearn/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="14" selection-start-line="11" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+          <caret line="252" selection-start-line="252" selection-end-line="252" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/sklearn/feature_extraction/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="959" column="22" selection-start-line="959" selection-start-column="12" selection-end-line="959" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sentiments/sentimentSentic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -460,62 +538,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/spacy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/sre_parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="541" column="38" lean-forward="true" selection-start-line="541" selection-start-column="38" selection-end-line="541" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pysyntime/model/TimeSegment.py">
+    <entry file="file://$PROJECT_DIR$/Sentiments/lexicalFeatures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/articles5k2.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state>
-          <caret column="56" selection-start-column="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Time Analysis/timeprocessor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/sklearn/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentiments/sentimentSentic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Datasets Preparation/MainNER.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-end-line="8" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -524,10 +549,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="238">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Time Analysis/timeprocessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Datasets Preparation/MainNER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/News-classification/TF-With-2ND-Dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="64" column="88" selection-start-line="64" selection-start-column="65" selection-end-line="64" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Citations/verbsynonyms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Citations/Features.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
