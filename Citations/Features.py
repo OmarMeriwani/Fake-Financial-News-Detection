@@ -10,9 +10,10 @@ import sys
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize import MWETokenizer
-sys.path.append("./Citations/verbsynonyms.py")
 from nltk.stem.porter import *
 from verbsynonyms import getVerbs
+from parsers import WhoSaid
+from sklearn.model_selection import train_test_split
 
 java_path = "C:/Program Files/Java/jdk1.8.0_161/bin/java.exe"
 os.environ['JAVAHOME'] = java_path
@@ -27,7 +28,8 @@ df = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/Using Resources D
 seq = 0
 lemmatizer = WordNetLemmatizer()
 stemmer = PorterStemmer()
-
+x = []
+y = []
 for i in range(0,len(df)):
     #id,title,publication,author,date,year,month,url,content
     title= str(df.loc[i].values[0])
@@ -39,13 +41,28 @@ for i in range(0,len(df)):
     tagsarr = []
     sayverbs = getVerbs('say')
     isSayVerb = 0
+    isNPPSaid = 0
+    isNERSaid = 0
+    isQuestion = 0
     nnpfound = 0
+    if '?' in title:
+        isQuestion = 1
     nnp_followed_by_colon = 0
     mid = int((len(tags) -1) / 2)
     for t in lemTags:
+        verb = stemmer.stem(str(t[0]).lower())
         if 'V' in t[1]:
             for j in sayverbs:
-                if stemmer.stem(str(t[0]).lower()) == str(j).lower():
+
+                if verb == str(j).lower():
+                    whosaid = WhoSaid(title, str(t[0]))
+                    if whosaid != []:
+                        for w in whosaid:
+                            if w[1] == 'NNP':
+                                isNPPSaid = 1
+                            if w[2] != 'O':
+                                isNERSaid = 1
+                        print('Whosaid', whosaid)
                     isSayVerb = 1
                     print('SayVerb',t[0])
                     break
@@ -75,5 +92,15 @@ for i in range(0,len(df)):
         #print(tags)
         #ORGANIZATION, COUNTRY, PERSON
     print(title)
-    print( 'isreferenced', isreferenced,'colonAvailable', colonAvailable, 'nnp_followed_by_colon:', nnp_followed_by_colon,'nnp_preceeded_by_colon',nnp_preceeded_by_colon)
+    print( 'isreferenced', isreferenced,'colonAvailable', colonAvailable, 'nnp_followed_by_colon:',
+           nnp_followed_by_colon,'nnp_preceeded_by_colon',nnp_preceeded_by_colon, 'isNPPSaid',isNPPSaid,
+           'isNERSaid',isNERSaid, 'isQuestion',isQuestion)
+    x.append([colonAvailable,nnp_followed_by_colon,nnp_preceeded_by_colon, isNPPSaid,isNERSaid, isQuestion])
+    y.append(isreferenced)
     print('--------------------------------------------------------------------------')
+X_train, X_test, y_train, y_test = train_test_split(
+    x, y, test_size=0.33, random_state=42)
+mlp = MLPClassifier()
+mlp.fit(X_train,y_train)
+score = mlp.score(X_test,y_test)
+print(score)
