@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Citations/Features.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
+            <state relative-caret-position="240">
+              <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -58,13 +58,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Citations/parsers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-end-line="33" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,18 +100,6 @@
             <state>
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Market/iex.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,6 +150,8 @@
       <find>whosaid</find>
       <find>'Seen</find>
       <find>isQuestion 1</find>
+      <find>point</find>
+      <find>point</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -170,6 +172,8 @@
         <option value="$PROJECT_DIR$/Citations/verbsynonyms.py" />
         <option value="$PROJECT_DIR$/Citations/verbnet-3.2/parser.py" />
         <option value="$PROJECT_DIR$/Citations/parsers.py" />
+        <option value="$PROJECT_DIR$/Numbers Meaning/NumbersParser.py" />
+        <option value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
         <option value="$PROJECT_DIR$/Citations/Features.py" />
       </list>
     </option>
@@ -251,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Features">
+  <component name="RunManager" selected="Python.NumbersTitlesDataset">
     <configuration name="Features" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fake-Financial-News-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,7 +277,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MainNER" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="NumbersTitlesDataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fake-Financial-News-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -281,11 +285,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Datasets Preparation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numbers Meaning" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Datasets Preparation/MainNER.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,19 +356,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.MainNER" />
       <item itemvalue="Python.Features" />
       <item itemvalue="Python.verb-synonyms" />
       <item itemvalue="Python.parsers" />
       <item itemvalue="Python tests.pytest in test.py" />
+      <item itemvalue="Python.NumbersTitlesDataset" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.NumbersTitlesDataset" />
         <item itemvalue="Python.Features" />
         <item itemvalue="Python.parsers" />
         <item itemvalue="Python tests.pytest in test.py" />
         <item itemvalue="Python.verb-synonyms" />
-        <item itemvalue="Python.MainNER" />
       </list>
     </recent_temporary>
   </component>
@@ -404,7 +408,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2214854" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33289126" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39920425" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -623,22 +627,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Citations/Features.py">
+    <entry file="file://$PROJECT_DIR$/Citations/parsers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Citations/parsers.py">
+    <entry file="file://$PROJECT_DIR$/Citations/Features.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

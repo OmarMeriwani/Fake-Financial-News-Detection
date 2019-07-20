@@ -58,9 +58,9 @@ for i in range(0,len(df)):
                     whosaid = WhoSaid(title, str(t[0]))
                     if whosaid != []:
                         for w in whosaid:
-                            if w[1] == 'NNP':
+                            if w[1] == 'NNP' and isNPPSaid == 0:
                                 isNPPSaid = 1
-                            if w[2] != 'O':
+                            if w[2] != 'O' and isNERSaid == 0:
                                 isNERSaid = 1
                         print('Whosaid', whosaid)
                     isSayVerb = 1
