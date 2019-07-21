@@ -19,11 +19,12 @@ def normalize_text(s):
     s = re.sub('\s+', ' ', s)
     return s
 alltokens = []
+classifiedrows = 400000
 df3 = pd.DataFrame(columns=['title'])
 def get_vocabulary(doc,encoding,textIndex,encodeDecode):
     #'ISO-8859-1'
     df = pd.read_csv(doc, header=0, encoding=encoding)
-    df = df[:10000]
+    df = df[:classifiedrows]
     atokens = []
     for i in range(0,len(df)):
         sentence = df.loc[i][textIndex]
@@ -56,14 +57,19 @@ def clean_doc(doc):
 #df = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/articles1.csv',header=0,encoding='ISO-8859-1')
 #alltokens = get_vocabulary('C:/Users/Omar/Documents/MSc Project/Datasets/articles1.csv','ISO-8859-1',2,True)
 alltokens = get_vocabulary('C:/Users/Omar/Documents/MSc Project/Datasets/uci-news-aggregator.csv','utf-8',1,False)
-
+df_store_vocab = pd.DataFrame(columns=['word'])
+seq = 0
+for i in alltokens:
+    df_store_vocab.loc[seq] = i
+    seq += 1
+#df_store_vocab.to_csv('vocab.csv')
 print(alltokens)
 vectorizer = CountVectorizer(vocabulary=alltokens)
 #print('DF3:',df3)
 x2 = vectorizer.fit_transform(df3['title'])
 print('SHAPE2: ',x2.shape)
 news = pd.read_csv("C:/Users/Omar/Documents/MSc Project/Datasets/uci-news-aggregator.csv")
-news = news[:10000]
+news = news[:classifiedrows]
 seq = 0
 df2 = pd.DataFrame(columns=['title','category'])
 for i in range(0,len(news)):
@@ -84,6 +90,8 @@ print(df2)
 
 #Vectorizer
 x = vectorizer.fit_transform(df2['title'])
+pickle.dump(vectorizer.vocabulary_, open('vocab.pkl', 'wb'))
+
 print('SHAPE: ',x.shape)
 #Change categories into numbers
 encoder = LabelEncoder()
@@ -102,12 +110,12 @@ print(y_test.shape)
 mlp = MLPClassifier(activation='tanh', hidden_layer_sizes=(20,20,20))
 mlp.fit(x_train,y_train)
 
-#pickle.dump(mlp, open('MLPClassifier20.sav', 'wb'))
+pickle.dump(mlp, open('MLPClassifier4.pkl', 'wb'))
 score = mlp.score(x_test, y_test)
 print(score)
 
 y2 = mlp.predict(x2)
-for i in range(0,x2.shape[0]):
-    print(df3.loc[i][0],encoder.classes_[y2[i]])
+#for i in range(0,x2.shape[0]):
+#    print(df3.loc[i][0],encoder.classes_[y2[i]])
 print(encoder.classes_)
 #b : business -- t : science and technology -- e : entertainment -- m : health

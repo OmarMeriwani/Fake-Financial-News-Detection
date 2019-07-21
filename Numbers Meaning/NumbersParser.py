@@ -9,5 +9,3 @@ port=9000
 scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
 sent = '2nd-Half Turnaround seen for Urban Outfitters (URBN), Jefferies Says'
 verb = 'Says'
-def GetNumbers (sent, verb):
-    
