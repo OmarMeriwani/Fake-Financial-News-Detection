@@ -12,42 +12,33 @@ from keras.layers import Flatten
 from keras.layers import Embedding
 from gensim.models import KeyedVectors
 from gensim.test.utils import datapath
+from sklearn.model_selection import train_test_split
+from nltk.stem.porter import *
+from createVocabulary import clean_doc
+
+stemmer = PorterStemmer()
+
 def load_doc(filename):
-	# open the file as read only
-	file = open(filename, 'r')
-	# read all text
-	text = file.read()
-	# close the file
-	file.close()
-	return text
+    # open the file as read only
+    file = open(filename, 'r')
+    # read all text
+    text = file.read()
+    # close the file
+    file.close()
+    return text
 
 
 def doc_to_clean_lines(doc, vocab):
-	clean_lines = ''
-	lines = doc.splitlines()
+    clean_lines = ''
+    lines = doc.splitlines()
 
-	for line in lines:
-		# split into tokens by white space
-		tokens = line.split()
-		# remove punctuation from each token
-		table = str.maketrans('', '', punctuation)
-		tokens = [w.translate(table) for w in tokens]
-		# filter out tokens not in vocab
-		tokens = [w for w in tokens if w.lower() in vocab]
-		clean_lines = ' '.join(tokens)
-	return clean_lines
-def process_docs2(directory, vocab, is_trian):
-	lines = list()
-	# walk through all files in the folder
-	for filename in listdir(directory):
-		# create the full path of the file to open
-		path = directory + '/' + filename
-		# load and clean the doc
-		doc = load_doc(path)
-		doc_lines = doc_to_clean_lines(doc, vocab)
-		# add lines to list
-		lines += doc_lines
-	return lines
+    for line in lines:
+        #print('Line Before: ', line)
+        clean_lines = ' '.join(clean_doc(line))
+        #print('Line After: ', clean_lines)
+
+    return clean_lines
+
 
 # load the vocabulary
 vocab_filename = 'vocabulary.txt'
@@ -55,92 +46,84 @@ vocab = load_doc(vocab_filename)
 vocab = vocab.split()
 vocab = set(vocab)
 vocab = [v.lower() for v in vocab]
-def load_embedding2(binfile):
-	# load embedding into memory, skip first line
-	# create a map of words to vectors
-	embedding = dict()
-	for line in binfile:
-		parts = line.split()
-		# key is string word, value is numpy array for vector
-		embedding[parts[0]] = asarray(parts[1:], dtype='float32')
-	return embedding
 
-def load_embedding(filename):
-	# load embedding into memory, skip first line
-	file = open(filename,'r')
-	lines = file.readlines()
-	file.close()
-	# create a map of words to vectors
-	embedding = dict()
-	for line in lines:
-		parts = line.split()
-		# key is string word, value is numpy array for vector
-		embedding[parts[0]] = asarray(parts[1:], dtype='float32')
-	return embedding
-def get_weight_matrix(embedding, vocab):
-	# total vocabulary size plus 0 for unknown words
-	vocab_size = len(vocab) + 1
-	# define weight matrix dimensions with all 0
-	weight_matrix = zeros((vocab_size, 100))
-	# step vocab, store vectors using the Tokenizer's integer mapping
-	for word, i in vocab.items():
-		vector = embedding.get(word)
-		if vector is not None:
-			weight_matrix[i] = vector
-	return weight_matrix
+
 def get_weight_matrix2(embedding, vocab):
-	# total vocabulary size plus 0 for unknown words
-	vocab_size = len(vocab) + 1
-	# define weight matrix dimensions with all 0
-	weight_matrix = zeros((vocab_size, 300))
-	# step vocab, store vectors using the Tokenizer's integer mapping
-	for word, i in vocab:
-		vector = None
-		try:
-			vector = embedding.get_vector(word)
-		except:
-			continue
-		if vector is not None:
-			weight_matrix[i] = vector
-	return weight_matrix
+    # total vocabulary size plus 0 for unknown words
+    vocab_size2 = len(vocab) + 1
+    # define weight matrix dimensions with all 0
+    weight_matrix = zeros((vocab_size2, 300))
+    # step vocab, store vectors using the Tokenizer's integer mapping
+    for word, i in vocab:
+        vector = None
+        try:
+            vector = embedding.get_vector(word)
+        except:
+            continue
+        if vector is not None:
+            weight_matrix[i] = vector
+    return weight_matrix
+
 
 def readfile(filename):
-	df = pd.read_csv(filename,header=0,sep='\t')
-	mode = 'sentence' #all sentences or only full reviews (sentence,full)
-	data = []
-	prev = ''
-	for i in range(0,len(df)):
-		if mode == 'sentence':
-			if prev != str(df.loc[i][1]):
-				sentence = df.loc[i][2]
-				prev = str(df.loc[i][1])
-			else:
-				continue
-		else:
-			sentence = df.loc[i][2]
-		reviewPolarity = int(df.loc[i][3])
-		'''tokens = []
-		tknzr = RegexpTokenizer(r'\w+')
-		t = tknzr.tokenize(sentence)
-		for tk in t:
-			tokens.append(tk)
-		table = str.maketrans('', '', punctuation)
-		tokens = [w.translate(table) for w in tokens]'''
-		sentence = doc_to_clean_lines(sentence,vocab)
-		data.append([sentence,reviewPolarity])
-	return data
+    df = pd.read_csv(filename,header=0)
+    mode = 'sentence'
+    data = []
+    prev = ''
+    for i in range(0,len(df)):
+        sentence = df.loc[i][1]
+        group = int(df.loc[i][2])
+        timestamp = df.loc[i][3]
+        sentence = doc_to_clean_lines(sentence,vocab)
+        data.append([sentence,timestamp,group])
+    return data
+
+def sortByGroup(val):
+    return val[2]
+
 def split(docs, percentage):
-	length = len(docs)
-	firstlength = int (length * percentage)
-	training = docs[:firstlength]
-	test = docs[firstlength:length]
-	return training,test
-data = np.array(readfile('train.csv'))
-print(data.shape)
-#print(data[:,0])
-traindata, testdata = split(data,0.7)
-print(testdata.shape)
-print(traindata.shape)
+    docs.sort(key=sortByGroup)
+    length = len(docs)
+    groups = []
+    test = []
+    training = []
+    previousGroup = 0
+    for i in docs:
+        if i[2] != previousGroup and previousGroup == 0:
+            previousGroup = i[2]
+            groups.append([i[0],i[2]])
+        if i[2] == previousGroup and previousGroup != 0:
+            groups.append([i[0],i[2]])
+        if i[2] != previousGroup and previousGroup != 0:
+            gLength = groups.__len__()
+            testsize = int(gLength * percentage)
+            groupsTraining, groupsTest  = train_test_split(groups,test_size=percentage)
+            for t in groupsTraining:
+                training.append(t)
+            for t in groupsTest:
+                test.append(t)
+            #print('groupsTest', [g for g in groupsTest])
+            #print('groupsTraining', [g for g in groupsTraining])
+            groups = []
+            groups.append([i[0], i[2]])
+            previousGroup = i[2]
+            print(i[2])
+
+    #print('GROUPS ',groups)
+    firstlength = int (length * percentage)
+    #training = docs[:firstlength]
+    #test = docs[firstlength:length]
+    return training,test
+
+
+data = readfile('NewsGroups1300.csv')
+#print(data.shape)
+traindata, testdata = split(data,0.2)
+traindata = np.array(traindata)
+testdata = np.array(testdata)
+#traindata, testdata = train_test_split(data[1],data[2],test_size=0.33,stratify=data[2])
+#print(testdata.shape)
+#print(traindata.shape)
 train_docs = traindata[:,0]
 tokenizer = Tokenizer()
 # fit the tokenizer on the documents
@@ -172,13 +155,7 @@ ytest = testdata[:,1]
 vocab_size = len(tokenizer.word_index) + 1
 
 # load embedding from file
-#raw_embedding = load_embedding('embedding2.txt')
-#raw_embedding = load_embedding('G:/Data/GN/GoogleNews-vectors-negative300.bin', binary=True)
-wv_from_bin = KeyedVectors.load_word2vec_format(datapath('G:/Data/GN/GoogleNews-vectors-negative300.bin'), binary=True)
-#raw_embedding = load_embedding(wv_from_bin)
-# get vectors in the right order
-#embedding_vectors = get_weight_matrix(raw_embedding, tokenizer.word_index)
-
+wv_from_bin = KeyedVectors.load_word2vec_format(datapath('E:/Data/GN/GoogleNews-vectors-negative300.bin'), binary=True)
 embedding_vectors = get_weight_matrix2(wv_from_bin, tokenizer.word_index.items())
 
 print('embedding_vectors.shape() =============================')
@@ -187,15 +164,6 @@ print(embedding_vectors.shape)
 # create the embedding layer
 embedding_layer = Embedding(vocab_size, 300, weights=[embedding_vectors], input_length=max_length, trainable=False)
 # define model
-'''model = Sequential()
-model.add(embedding_layer)
-model.add(Conv1D(filters=128, kernel_size=5, activation='relu'))
-model.add(MaxPooling1D(pool_size=2))
-model.add(Flatten())
-model.add(Dense(1, activation='sigmoid'))
-print(model.summary())
-# compile network
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])'''
 model = Sequential()
 model.add(embedding_layer)
 model.add(Dense(128, activation='relu', input_dim=200))
@@ -204,15 +172,11 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
               metrics=['accuracy'])
-#print(model.summary())
-
+print(model.summary())
+#Test Accuracy: 0.692042
+#
 # fit network
 model.fit(Xtrain, ytrain, epochs=10, verbose=2)
-#model = LogisticRegression(C=0.2, dual=True)
-#model.fit(Xtrain, ytrain)
-
 # evaluate
 loss, acc = model.evaluate(Xtest, ytest, verbose=0)
-#result = model.score(Xtest,ytest)
 print('Test Accuracy: %f' % (acc*100))
-#print(result)
