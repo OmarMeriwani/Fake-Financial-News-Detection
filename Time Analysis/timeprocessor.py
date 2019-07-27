@@ -34,7 +34,6 @@ for i in range(0,len(df)):
         datee = datee.strftime('%Y-%m-%d')
         sentences = sent_tokenize(text)
         print(datee, synTime.extractTimexFromText(sentences[0] + ' ' + sentences[1], datee))
-
     except:
         continue
 

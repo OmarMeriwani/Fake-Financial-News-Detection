@@ -3,6 +3,11 @@ import re
 from stanfordcorenlp import StanfordCoreNLP
 import os
 import sys
+import nltk
+#df_smbls = pd.read_csv('symbols.csv',header=0)
+from nltk.corpus import stopwords
+stop_words = stopwords.words('english')
+
 
 java_path = "C:/Program Files/Java/jdk1.8.0_161/bin/java.exe"
 os.environ['JAVAHOME'] = java_path
@@ -13,13 +18,97 @@ scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
 df = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/BusinessTitlesFull.csv',header=0)
 df2 = pd.DataFrame(columns=['ID','TITLE','URL','PUBLISHER','CATEGORY','HOSTNAME','TIMESTAMP'])
 
-for i in range(0, len(df)):
-    title= str(df.loc[i].values[1])
-    numbers = re.findall(r'\d+ points|\d+ point|\d+\%|\$\d+|\£\d+|\€\d+', title)
-    if numbers != []:
-        ners = scnlp.ner(title)
-        for n in ners:
-            if n[1] == 'ORGANIZATION':
-                print(title, n[0])
-                break
+#df_corp_names = pd.read_csv('C:/Users/Omar/Documents/GitHub/Fake-Financial-News-Detection/Market/UniqueCompanyNames.csv')
+df_corp_names = pd.read_csv('../Market/UniqueCompanyNames.csv')
 
+corp_names = df_corp_names.values.tolist()
+print(corp_names)
+
+corp_names_freq = {}
+for i  in corp_names:
+    tokens = nltk.tokenize.word_tokenize(i[0])
+    for t in tokens:
+        if t not in corp_names_freq:
+            corp_names_freq[str(t).lower()] = 1
+        else:
+            corp_names_freq[t] = corp_names_freq.get(str(t).lower()) + 1
+for i in range(0, 200):
+    title= str(df.loc[i].values[1])
+    foundCorporates = ''
+    disable_single_words = 1
+    #title = title.encode('ascii', errors='ignore').decode("utf-8")
+    TitleTokens = []
+    pos_title = scnlp.pos_tag(title)
+    for p in pos_title:
+        TitleTokens.append(str(p[0]).lower())
+    #print(title)
+    #print(TitleTokens)
+    numbers = re.findall(r'\d+ points|\d+ point|\d+\%|\$\d+|\£\d+|\€\d+', title)
+    #if numbers != []:
+    for corp in corp_names:
+        #print('CORPP', corp)
+        tokens = nltk.tokenize.word_tokenize(corp[0])
+        firstOnly = tokens[0]
+        both = str(corp[0])
+        #print('BOTHH',both)
+        symbol = str(corp[1])
+        bothFound = 0
+        for j in range(0, len(TitleTokens)):
+            CurrentWord = str(TitleTokens[j]).lower()
+            NextWord = ''
+            CompanysFirstWord = str(tokens[0]).lower()
+            CompanysSecondWord = ''
+            try:
+                CompanysSecondWord = str(tokens[1]).lower()
+            except:
+                DONOTHING = 0
+            nextPOS = ''
+            try:
+                NextWord = str(TitleTokens[j + 1]).lower()
+                nextPOS = pos_title[j + 1][1]
+            except:
+                DONOTHING = 0
+            currentPOS = ''
+            try:
+                currentPOS = pos_title[j][1]
+            except Exception as e:
+                print(e)
+                print(pos_title)
+            '''if CurrentWord == 'ebay' and CompanysFirstWord.lower() == 'ebay':
+                print('CurrentWord == CompanysFirstWord', CurrentWord == CompanysFirstWord)
+                print('CompanysSecondWord == NULL', CompanysSecondWord == '')
+                print('NextWord == CompanysSecondWord', NextWord == CompanysSecondWord)
+                print('NextWord != NULL', NextWord != '')'''
+            if (CurrentWord == CompanysFirstWord and CompanysSecondWord == '' and 'NN' in currentPOS ) or  \
+                    (CurrentWord == CompanysFirstWord and NextWord == CompanysSecondWord and NextWord != ''):
+                foundCorporates += ' | Two Words: '+ both +  ',' + str(j)
+                bothFound = 1
+            if disable_single_words == 0 and bothFound != 1 and CurrentWord == CompanysFirstWord and corp_names_freq.get(CompanysFirstWord) <= 5 \
+                    and CompanysFirstWord not in stop_words  and ('NN' in nextPOS ) and 'NN' in currentPOS:
+                foundCorporates += ' | One Word:'+ both +  ',' + str(j)
+            if CurrentWord == symbol and len(symbol) > 3:
+                foundCorporates += ' | Symbol:'+ both + ',' + symbol + ',' + str(j)
+    if foundCorporates != '':
+        print('FOUND: ',title, foundCorporates)
+    else:
+        print('NOTFOUND: ',title)
+#if firstOnly in title:
+#    print(title, 'FIRST: ',firstOnly)
+'''if both in title and len(tokens) > 1 :
+    print(title, 'BOTH: ',both)
+    break
+if ' '+ symbol + ' ' in title and len(symbol) > 3:
+    print(title, 'SYMBOL: ',symbol)
+    break'''
+
+'''
+Single letters
+Country names
+High frequency words such as first, credit, new
+
+ners = scnlp.ner(title)
+for n in ners:
+    if n[1] == 'ORGANIZATION':
+        print(title, n[0])
+        break
+'''
