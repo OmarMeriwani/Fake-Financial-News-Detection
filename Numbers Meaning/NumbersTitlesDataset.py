@@ -32,7 +32,7 @@ for i  in corp_names:
             corp_names_freq[str(t).lower()] = 1
         else:
             corp_names_freq[t] = corp_names_freq.get(str(t).lower()) + 1
-for i in range(0, 200):
+for i in range(0, 100000):
     title= str(df.loc[i].values[1])
     foundCorporates = ''
     disable_single_words = 1
@@ -41,57 +41,65 @@ for i in range(0, 200):
     pos_title = scnlp.pos_tag(title)
     for p in pos_title:
         TitleTokens.append(str(p[0]).lower())
+    TitleTokensCase = []
+    for p in pos_title:
+        TitleTokensCase.append( True if str(p[0])[0].isupper() else False)
+
     #print(title)
     #print(TitleTokens)
-    numbers = re.findall(r'\d+ points|\d+ point|\d+\%|\$\d+|\£\d+|\€\d+', title)
-    #if numbers != []:
-    for corp in corp_names:
-        #print('CORPP', corp)
-        tokens = nltk.tokenize.word_tokenize(corp[0])
-        firstOnly = tokens[0]
-        both = str(corp[0])
-        #print('BOTHH',both)
-        symbol = str(corp[1])
-        bothFound = 0
-        for j in range(0, len(TitleTokens)):
-            CurrentWord = str(TitleTokens[j]).lower()
-            NextWord = ''
-            CompanysFirstWord = str(tokens[0]).lower()
-            CompanysSecondWord = ''
-            try:
-                CompanysSecondWord = str(tokens[1]).lower()
-            except:
-                DONOTHING = 0
-            nextPOS = ''
-            try:
-                NextWord = str(TitleTokens[j + 1]).lower()
-                nextPOS = pos_title[j + 1][1]
-            except:
-                DONOTHING = 0
-            currentPOS = ''
-            try:
-                currentPOS = pos_title[j][1]
-            except Exception as e:
-                print(e)
-                print(pos_title)
-            '''if CurrentWord == 'ebay' and CompanysFirstWord.lower() == 'ebay':
-                print('CurrentWord == CompanysFirstWord', CurrentWord == CompanysFirstWord)
-                print('CompanysSecondWord == NULL', CompanysSecondWord == '')
-                print('NextWord == CompanysSecondWord', NextWord == CompanysSecondWord)
-                print('NextWord != NULL', NextWord != '')'''
-            if (CurrentWord == CompanysFirstWord and CompanysSecondWord == '' and 'NN' in currentPOS ) or  \
-                    (CurrentWord == CompanysFirstWord and NextWord == CompanysSecondWord and NextWord != ''):
-                foundCorporates += ' | Two Words: '+ both +  ',' + str(j)
-                bothFound = 1
-            if disable_single_words == 0 and bothFound != 1 and CurrentWord == CompanysFirstWord and corp_names_freq.get(CompanysFirstWord) <= 5 \
-                    and CompanysFirstWord not in stop_words  and ('NN' in nextPOS ) and 'NN' in currentPOS:
-                foundCorporates += ' | One Word:'+ both +  ',' + str(j)
-            if CurrentWord == symbol and len(symbol) > 3:
-                foundCorporates += ' | Symbol:'+ both + ',' + symbol + ',' + str(j)
-    if foundCorporates != '':
-        print('FOUND: ',title, foundCorporates)
-    else:
-        print('NOTFOUND: ',title)
+    points = re.findall(r'stock\ |stocks|share\ |shares', str(title).lower())
+    if points != []:
+        dollars = re.findall(r'\d+\.?\d+\%|[$|£|€|%]\d+\.?\d+\ ?[bln|billion|b\ |million|mln|m\ |k\ ]?', title.lower())
+        if dollars != []:
+        #if numbers != []:
+            for corp in corp_names:
+                #print('CORPP', corp)
+                tokens = nltk.tokenize.word_tokenize(corp[0])
+                firstOnly = tokens[0]
+                both = str(corp[0])
+                #print('BOTHH',both)
+                symbol = str(corp[1])
+                bothFound = 0
+                for j in range(0, len(TitleTokens)):
+                    CurrentWord = str(TitleTokens[j]).lower()
+                    NextWord = ''
+                    CompanysFirstWord = str(tokens[0]).lower()
+                    CompanysSecondWord = ''
+                    try:
+                        CompanysSecondWord = str(tokens[1]).lower()
+                    except:
+                        DONOTHING = 0
+                    nextPOS = ''
+                    try:
+                        NextWord = str(TitleTokens[j + 1]).lower()
+                        nextPOS = pos_title[j + 1][1]
+                    except:
+                        DONOTHING = 0
+                    currentPOS = ''
+                    try:
+                        currentPOS = pos_title[j][1]
+                    except Exception as e:
+                        print(e)
+                        print(pos_title)
+                    '''if CurrentWord == 'ebay' and CompanysFirstWord.lower() == 'ebay':
+                        print('CurrentWord == CompanysFirstWord', CurrentWord == CompanysFirstWord)
+                        print('CompanysSecondWord == NULL', CompanysSecondWord == '')
+                        print('NextWord == CompanysSecondWord', NextWord == CompanysSecondWord)
+                        print('NextWord != NULL', NextWord != '')'''
+                    if (CurrentWord == CompanysFirstWord and CompanysSecondWord == '' and TitleTokensCase[j] == True and 'NN' in currentPOS ) or  \
+                            (CurrentWord == CompanysFirstWord and NextWord == CompanysSecondWord and NextWord != ''):
+                        foundCorporates += ' | Corporate Name: '+ both +  ',' + str(j)
+                        bothFound = 1
+                    if disable_single_words == 0 and bothFound != 1 and CurrentWord == CompanysFirstWord and corp_names_freq.get(CompanysFirstWord) <= 5 \
+                            and CompanysFirstWord not in stop_words  and ('NN' in nextPOS ) and 'NN' in currentPOS:
+                        foundCorporates += ' | One Word:'+ both +  ',' + str(j)
+                    if CurrentWord == symbol and len(symbol) > 3:
+                        foundCorporates += ' | Corporate Symbol:'+ both + ',' + symbol + ',' + str(j)
+            #print(points)
+            if foundCorporates != '':
+                print('FOUND: ',title, foundCorporates, points, dollars)
+    #else:
+    #    print('NOTFOUND: ',title)
 #if firstOnly in title:
 #    print(title, 'FIRST: ',firstOnly)
 '''if both in title and len(tokens) > 1 :
