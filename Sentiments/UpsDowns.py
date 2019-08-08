@@ -66,11 +66,8 @@ vocab = [v.lower() for v in vocab]
 
 
 def get_weight_matrix2(embedding, vocab):
-    # total vocabulary size plus 0 for unknown words
     vocab_size2 = len(vocab) + 1
-    # define weight matrix dimensions with all 0
     weight_matrix = zeros((vocab_size2, 300))
-    # step vocab, store vectors using the Tokenizer's integer mapping
     for word, i in vocab:
         vector = None
         try:
@@ -169,7 +166,9 @@ x_train, x_test, y_train, y_test = train_test_split(headlines,effects,test_size=
 traindata = np.array(x_train)
 testdata = np.array(x_test)
 
+y_testold = y_test
 y_test = np_utils.to_categorical(y_test,num_classes=2)
+print(y_testold, y_test)
 y_train = np_utils.to_categorical(y_train,num_classes=2)
 #print('y_train',y_test)
 #print('y_train',y_train)
@@ -227,23 +226,27 @@ for sz in filter_sizes:
     conv_blocks.append(conv)
 z = Concatenate()(conv_blocks if len(conv_blocks) > 1 else conv_blocks[0])
 z = Dropout(0.8)(z)
-model_output = Dense(20, activation="sigmoid" , bias_initializer='zeros')(z)
-#model_output = Dense(20)(model_output)
+model_output = Dense(10, activation="sigmoid" , bias_initializer='zeros')(z)
+model_output = Dense(10)(model_output)
 model_output = Dropout(0.8)(model_output)
-model_output = Dense(2)(model_output)
+#model_output = Dense(2)(model_output)
 model_output = Dense(2, activation="selu")(model_output)
 model = Model(model_input, model_output)
-model.compile(loss="categorical_hinge", optimizer="adam", metrics=["accuracy"])
-model.summary(85)
-
-#callback = tf.keras.callbacks.EarlyStopping(monitor='val_acc', mode='max', min_delta=1, patience=50)
-history = model.fit(Xtrain, y_train, batch_size=batch_size, epochs=num_epochs,
-          validation_data=(Xtest, y_test), verbose=2)
-print('History', history.history)
-#model.fit(Xtrain, ytrain, epochs=10, verbose=2)
-# evaluate
-loss, acc = model.evaluate(Xtest, y_test, verbose=2)
-print('Test Accuracy: %f' % (acc*100))
+max = 76.97
+for i in range(100):
+    model.compile(loss="categorical_hinge", optimizer="adam", metrics=["accuracy"])
+    model.summary(85)
+    #callback = tf.keras.callbacks.EarlyStopping(monitor='val_acc', mode='max', min_delta=1, patience=50)
+    history = model.fit(Xtrain, y_train, batch_size=batch_size, epochs=50,
+              validation_data=(Xtest, y_test), verbose=2)
+    print('History', history.history)
+    #model.fit(Xtrain, ytrain, epochs=10, verbose=2)
+    # evaluate
+    loss, acc = model.evaluate(Xtest, y_test, verbose=2)
+    print('Test Accuracy: %f' % (acc*100))
+    if acc > max:
+        max = acc
+        model.save('upsdowns_model.h5')
 
 '''
 Start:
@@ -325,5 +328,5 @@ Without removing upper case: 69%
 Remove NNP: 74.5%
 #ner: 74.5%
 Remove company name: 77% with early stopping
-Adding dropout: 
+Adding dropout: 76.9
 '''

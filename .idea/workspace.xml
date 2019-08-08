@@ -14,7 +14,6 @@
         <entry file="file://$PROJECT_DIR$/Similar News/createVocabulary.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -22,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sources/NewsSourceAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
@@ -34,11 +33,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sentiments/UpsDowns.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="241" column="28" selection-start-line="241" selection-end-line="242" />
+            <state relative-caret-position="340">
+              <caret line="306" column="17" lean-forward="true" selection-start-line="306" selection-start-column="17" selection-end-line="306" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="203" column="23" selection-start-line="203" selection-start-column="23" selection-end-line="203" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1605#5349#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state>
+              <caret column="17" selection-start-column="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -54,18 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>encode</find>
-      <find>Ebay</find>
-      <find>ebay</find>
-      <find>Dow</find>
-      <find>Chase,</find>
-      <find>Best</find>
-      <find>Chase</find>
-      <find>|</find>
-      <find>7.6</find>
-      <find>FOUND</find>
-      <find>two words</find>
-      <find>unit</find>
       <find>motorola</find>
       <find>countVec</find>
       <find>label</find>
@@ -76,14 +93,26 @@
       <find>K</find>
       <find>expand_dims</find>
       <find>backend</find>
-      <find>vocab</find>
       <find>6907</find>
       <find>ner</find>
       <find>John McCain</find>
       <find>MLPClassifier</find>
       <find>train_test_split</find>
-      <find>MLP</find>
+      <find>Test Accuracy:</find>
+      <find>./</find>
+      <find>Test acc</find>
+      <find>Test accuracy: 7</find>
+      <find>Test accuracy:</find>
       <find>model_input</find>
+      <find>test accuracy: 75</find>
+      <find>test accuracy: 76</find>
+      <find>vocab</find>
+      <find>stocks</find>
+      <find>df3</find>
+      <find>MLP</find>
+      <find>punc</find>
+      <find>seq</find>
+      <find>train_docs =</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -111,7 +140,6 @@
         <option value="$PROJECT_DIR$/Market/uniqueNames.py" />
         <option value="$PROJECT_DIR$/Time Analysis/timeprocessor.py" />
         <option value="$PROJECT_DIR$/Numbers Meaning/NumbersParser.py" />
-        <option value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
         <option value="$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py" />
         <option value="$PROJECT_DIR$/Sentiments/Vocabulary.py" />
         <option value="$PROJECT_DIR$/Sentiments/Attention.py" />
@@ -119,8 +147,11 @@
         <option value="$PROJECT_DIR$/Sentiments/UpsDowns2.py" />
         <option value="$PROJECT_DIR$/Sentiments/UpsDowns3.py" />
         <option value="$PROJECT_DIR$/Sentiments/UpDownSentiments.py" />
-        <option value="$PROJECT_DIR$/Sentiments/UpsDowns.py" />
         <option value="$PROJECT_DIR$/Sources/NewsSourceAnalysis.py" />
+        <option value="$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv" />
+        <option value="$PROJECT_DIR$/Sentiments/UpsDowns.py" />
+        <option value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
+        <option value="$PROJECT_DIR$/Sentiments/SentimentFakeNews.py" />
       </list>
     </option>
   </component>
@@ -206,6 +237,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Numbers Meaning" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Sources" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Similar News" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Time Analysis" />
@@ -230,28 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.NewsSourceAnalysis">
-    <configuration name="Attention2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fake-Financial-News-Detection" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sentiments" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sentiments/Attention2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.NumbersTitlesDataset">
     <configuration name="NewsSourceAnalysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fake-Financial-News-Detection" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -265,6 +276,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sources/NewsSourceAnalysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="NumbersTitlesDataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fake-Financial-News-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Numbers Meaning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -338,18 +370,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.UpsDowns" />
-      <item itemvalue="Python.Attention2" />
       <item itemvalue="Python.UpsDowns2" />
       <item itemvalue="Python.UpsDowns3" />
       <item itemvalue="Python.NewsSourceAnalysis" />
+      <item itemvalue="Python.NumbersTitlesDataset" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.NewsSourceAnalysis" />
+        <item itemvalue="Python.NumbersTitlesDataset" />
         <item itemvalue="Python.UpsDowns" />
+        <item itemvalue="Python.NewsSourceAnalysis" />
         <item itemvalue="Python.UpsDowns3" />
         <item itemvalue="Python.UpsDowns2" />
-        <item itemvalue="Python.Attention2" />
       </list>
     </recent_temporary>
   </component>
@@ -384,12 +416,12 @@
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3174807" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3174807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891247" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33289126" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33289126" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39920425" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -427,40 +459,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/pickle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="1616" column="21" selection-start-line="1616" selection-start-column="17" selection-end-line="1616" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Datasets Preparation/scrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Datasets Preparation/snopes_dataset2.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Similar News/vocabulary.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3227">
@@ -609,15 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Market/uniqueNames.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Similar News/word2vec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2635">
@@ -639,13 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -811,7 +793,6 @@
     <entry file="file://$PROJECT_DIR$/Similar News/createVocabulary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -841,13 +822,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sentiments/UpsDowns.py">
+    <entry file="file://$PROJECT_DIR$/Market/uniqueNames.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="241" column="28" selection-start-line="241" selection-end-line="242" />
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -857,6 +845,47 @@
           <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers Meaning/BusinessTitlesFull.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="204">
+          <caret line="2950" column="3" selection-start-line="2950" selection-start-column="3" selection-end-line="2950" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="17" selection-start-column="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sentiments/UpsDowns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="306" column="17" lean-forward="true" selection-start-line="306" selection-start-column="17" selection-end-line="306" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="203" column="23" selection-start-line="203" selection-start-column="23" selection-end-line="203" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1605#5349#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
