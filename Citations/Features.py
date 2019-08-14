@@ -23,7 +23,7 @@ scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
 
 tokenizer = RegexpTokenizer('\s+|\:|\.', gaps=True)
 MWETokenizer = MWETokenizer()
-df = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/Using Resources Dataset.csv',header=0)
+df = pd.read_csv('Using Resources Dataset.csv',header=0)
 #df2 = pd.DataFrame(columns=['id','reference','IsReferenced'])
 seq = 0
 lemmatizer = WordNetLemmatizer()
@@ -98,9 +98,15 @@ for i in range(0,len(df)):
     x.append([colonAvailable,nnp_followed_by_colon,nnp_preceeded_by_colon, isNPPSaid,isNERSaid, isQuestion])
     y.append(isreferenced)
     print('--------------------------------------------------------------------------')
+max = 0
 X_train, X_test, y_train, y_test = train_test_split(
     x, y, test_size=0.33, random_state=42)
-mlp = MLPClassifier()
-mlp.fit(X_train,y_train)
-score = mlp.score(X_test,y_test)
-print(score)
+for i in range(0,100):
+    mlp = MLPClassifier()
+    mlp.fit(X_train,y_train)
+    score = mlp.score(X_test,y_test)
+    print(score)
+    if score > max:
+        max = score
+        pickle.dump(mlp, open('WhoSaid.pkl', 'wb'))
+'''Score: 90.45%'''

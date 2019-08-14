@@ -15,6 +15,11 @@ from gensim.test.utils import datapath
 from sklearn.model_selection import train_test_split
 from nltk.stem.porter import *
 from createVocabulary import clean_doc
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+from keras.utils import np_utils
+from sklearn.metrics import classification_report
 
 stemmer = PorterStemmer()
 
@@ -71,7 +76,8 @@ def readfile(filename):
     data = []
     prev = ''
     for i in range(0,len(df)):
-        sentence = df.loc[i][1]
+        sentence = str(df.loc[i][1])
+
         group = int(df.loc[i][2])
         timestamp = df.loc[i][3]
         sentence = doc_to_clean_lines(sentence,vocab)
@@ -138,9 +144,8 @@ max_length = max([len(s.split()) for s in train_docs])
 Xtrain = pad_sequences(encoded_docs, maxlen=max_length, padding='post')
 # define training labels
 ytrain = traindata[:,1]
+ytrain = np_utils.to_categorical(ytrain)
 '''==============================================='''
-# create the tokenizer
-
 # load all test reviews
 test_docs = testdata[:,0]
 '''==============================================='''
@@ -151,7 +156,7 @@ Xtest = pad_sequences(encoded_docs, maxlen=max_length, padding='post')
 # define test labels
 ytest = testdata[:,1]
 
-# define vocabulary size (largest integer value)
+ytest = np_utils.to_categorical(ytest)# define vocabulary size (largest integer value)
 vocab_size = len(tokenizer.word_index) + 1
 
 # load embedding from file
@@ -166,17 +171,26 @@ embedding_layer = Embedding(vocab_size, 300, weights=[embedding_vectors], input_
 # define model
 model = Sequential()
 model.add(embedding_layer)
-model.add(Dense(128, activation='relu', input_dim=200))
+model.add(Dense(1400, activation='relu', input_dim=200))
 model.add(Flatten())
-model.add(Dense(1, activation='sigmoid'))
-model.compile(optimizer='rmsprop',
-              loss='binary_crossentropy',
+model.add(Dense(741, activation='softmax'))
+import tensorflow as tf
+model.compile(optimizer='adam',
+              loss=tf.compat.v1.keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 print(model.summary())
 #Test Accuracy: 0.692042
 #
 # fit network
-model.fit(Xtrain, ytrain, epochs=10, verbose=2)
+model.fit(Xtrain, ytrain, epochs=20, verbose=2, validation_data=(Xtest, ytest))
 # evaluate
 loss, acc = model.evaluate(Xtest, ytest, verbose=0)
 print('Test Accuracy: %f' % (acc*100))
+
+y_pred = model.predict(Xtest)
+y_pred_bool = np.argmax(y_pred, axis=1)
+
+print(classification_report(ytest, y_pred_bool))
+'''
+max: 79.24%
+'''

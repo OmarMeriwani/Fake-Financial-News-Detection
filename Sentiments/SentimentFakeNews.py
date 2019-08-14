@@ -55,23 +55,22 @@ def get_weight_matrix2(embedding, vocab):
 
 def readfile(filename):
     df = pd.read_csv(filename,header=0)
-    mode = 'sentence'
+
     data = pd.DataFrame(columns=['claim','label'])
-    prev = ''
     seq = 0
     table = str.maketrans('', '', punctuation)
 
     for i in range(0,len(df)):
-        sentence = df.loc[i][0]
+        #sentence = df.loc[i][0]
+        sentence = str(df.loc[i][1])
         tokens = scnlp.word_tokenize(sentence)
+        #Kaggle id,title,author,text,label
         sentenceList = []
         for word in tokens:
-            #print(word)
             isAllUpperCase = True
             for letter in word:
                 if letter.isupper() == False:
                     isAllUpperCase = False
-                    #print(word,letter, isAllUpperCase)
                     break
 
             if isAllUpperCase == False:
@@ -105,18 +104,20 @@ def readfile(filename):
             else:
                 sentenceList.append('#ner')
         sentence = ' '.join(sentenceList)
-        effect = df.loc[i][1]
-        if str(effect).lower() == 'true':
-            effect = 1
-        else:
-            effect = 0
+        effect = int(df.loc[i][4])
+        #effect = df.loc[i][1]
+        #if str(effect).lower() == 'true':
+        #    effect = 1
+        #else:
+        #    effect = 0
         if sentence.strip() != '':
             data.loc[seq] = [sentence,effect]
             print(sentence, effect)
             seq += 1
     return data
 
-data = readfile('FakeNewsSA.csv')
+data = readfile('C:/Users/Omar/Documents/MSc Project/Datasets/Kaggle Competition/train.csv')
+#data = readfile('FakeNewsSA.csv')
 headlines = data[['claim']]
 labels = data[['label']]
 
@@ -205,3 +206,8 @@ for i in range(100):
     if acc > max:
         max = acc
         model.save('sentimentAnalysis.h5')
+'''
+Test Accuracy: 87.93
+
+Test Accuracy (FNC): 66.08% 
+'''
