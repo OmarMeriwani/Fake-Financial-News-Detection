@@ -1,24 +1,14 @@
 import pandas as pd
-from nltk.tokenize import sent_tokenize
-import string
 import pickle
 from sklearn.neural_network import MLPClassifier
-from sklearn.feature_extraction.text import CountVectorizer
-from stanfordcorenlp import StanfordCoreNLP
-import os
-import sys
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import RegexpTokenizer
-from nltk.tokenize import MWETokenizer
 from nltk.stem.porter import *
-from verbsynonyms import getVerbs
-from parsers import WhoSaid
 from sklearn.model_selection import train_test_split
 import os
 from stanfordcorenlp import StanfordCoreNLP
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
+from nltk.corpus import wordnet
 
 
 java_path = "C:/Program Files/Java/jdk1.8.0_161/bin/java.exe"
@@ -27,6 +17,33 @@ host='http://localhost'
 port=9000
 scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
 stemmer = PorterStemmer()
+
+
+def getVerbs(verb):
+    synonyms = []
+    for syn in wordnet.synsets(verb):
+        for l in syn.lemmas():
+            synonyms.append(l.name())
+    #print(set(synonyms))
+    return set(synonyms)
+
+def WhoSaid (sent, verb):
+    #sent = sent.lower()
+    result = []
+    deps = scnlp.dependency_parse(sent)
+    tags = scnlp.pos_tag(sent)
+    ners = scnlp.ner(sent)
+    verbindex = []
+    for i in range(1, len(tags)):
+        if tags[i][0] == verb:
+            verbindex .append( i + 1)
+            #print(verbindex)
+            #break
+    for i in deps:
+        if i[1] in verbindex and i[0] == 'nsubj':
+            result.append([tags[i[2] - 1][0], tags[i[2] - 1][1], ners[i[2] - 1][1] ])
+    return result
+
 
 features = []
 df = pd.read_csv('../Sentiments/FakeNewsSA.csv')
