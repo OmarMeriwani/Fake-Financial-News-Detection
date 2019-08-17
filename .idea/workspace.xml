@@ -10,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
@@ -30,6 +30,27 @@
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Similar News/word2vec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Similar News/createVocabulary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -143,7 +164,6 @@
         <option value="$PROJECT_DIR$/Sentiments/UpDownSentiments.py" />
         <option value="$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv" />
         <option value="$PROJECT_DIR$/Sentiments/Objectivity.py" />
-        <option value="$PROJECT_DIR$/Similar News/word2vec.py" />
         <option value="$PROJECT_DIR$/Sources/NewsSourceAnalysis.py" />
         <option value="$PROJECT_DIR$/Citations/Features.py" />
         <option value="$PROJECT_DIR$/Citations/Objectivity.py" />
@@ -154,6 +174,7 @@
         <option value="$PROJECT_DIR$/Sentiments/UpsDowns.py" />
         <option value="$PROJECT_DIR$/Final/Sentiment Analysis.py" />
         <option value="$PROJECT_DIR$/Sentiments/SentimentFakeNews.py" />
+        <option value="$PROJECT_DIR$/Similar News/word2vec.py" />
       </list>
     </option>
   </component>
@@ -221,6 +242,11 @@
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
               <item name="Sentiments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Similar News" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -497,15 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Similar News/createVocabulary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -643,16 +660,6 @@
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="54230">
           <caret line="3190" column="29" selection-start-line="3190" selection-start-column="29" selection-end-line="3190" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Similar News/word2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2601">
-          <caret line="174" column="14" selection-start-line="174" selection-start-column="14" selection-end-line="174" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,6 +878,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="206" selection-start-line="196" selection-end-line="206" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Similar News/createVocabulary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Similar News/word2vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

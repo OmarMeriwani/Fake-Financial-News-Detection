@@ -1,9 +1,7 @@
 import numpy as np
 from string import punctuation
-from os import listdir
 import pandas as pd
 from numpy import zeros
-from numpy import asarray
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
@@ -14,14 +12,27 @@ from gensim.models import KeyedVectors
 from gensim.test.utils import datapath
 from sklearn.model_selection import train_test_split
 from nltk.stem.porter import *
-from createVocabulary import clean_doc
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import f1_score
 from keras.utils import np_utils
 from sklearn.metrics import classification_report
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
 
+lemmatizer = WordNetLemmatizer()
 stemmer = PorterStemmer()
+
+def clean_doc(doc):
+    doc = doc.encode('ascii', errors='ignore').decode("utf-8")
+    # split into tokens by white space
+    tokens = doc.split()
+    # remove punctuation from each token
+    table = str.maketrans('', '', punctuation)
+    tokens = [w.translate(table) for w in tokens]
+    # filter out stop words
+    stop_words = set(stopwords.words('english'))
+    tokens = [w for w in tokens if not w in stop_words]
+    # filter out short tokens
+    tokens = [lemmatizer.lemmatize(word.lower()) for word in tokens if len(word) > 1]
+    return tokens
 
 def load_doc(filename):
     # open the file as read only
