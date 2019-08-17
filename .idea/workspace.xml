@@ -9,43 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/News-classification/Classifier2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-end-line="118" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Market/uniqueNames.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="60" column="36" selection-start-line="55" selection-end-line="60" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,12 +129,7 @@
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
-              <item name="Market" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
-              <item name="News-classification" type="462c0819:PsiDirectoryNode" />
+              <item name="Numbers Meaning" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -191,8 +150,8 @@
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
@@ -362,7 +321,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3348329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -804,27 +762,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final/News-classification/uci-news-aggregator.csv">
       <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/News-classification/Classifier2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-end-line="118" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Final/Datasets Preparation/symbols.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
@@ -838,6 +777,25 @@
           <caret line="60" column="36" selection-start-line="55" selection-end-line="60" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/News-classification/Classifier2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-end-line="118" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
