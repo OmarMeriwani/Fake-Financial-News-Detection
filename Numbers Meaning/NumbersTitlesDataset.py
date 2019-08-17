@@ -3,9 +3,7 @@ import numpy as np
 import re
 from stanfordcorenlp import StanfordCoreNLP
 import os
-import sys
 import nltk
-#df_smbls = pd.read_csv('symbols.csv',header=0)
 from nltk.corpus import stopwords
 from keras.models import load_model
 from keras.preprocessing.text import Tokenizer
@@ -28,10 +26,7 @@ scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
 
 df = pd.read_csv('BusinessTitlesFull.csv',header=0)
 df2 = pd.DataFrame(columns=['ID','TITLE','URL','PUBLISHER','CATEGORY','HOSTNAME','TIMESTAMP'])
-
-#df_corp_names = pd.read_csv('C:/Users/Omar/Documents/GitHub/Fake-Financial-News-Detection/Market/UniqueCompanyNames.csv')
 df_corp_names = pd.read_csv('../Market/UniqueCompanyNames.csv')
-
 corp_names = df_corp_names.values.tolist()
 print(corp_names)
 

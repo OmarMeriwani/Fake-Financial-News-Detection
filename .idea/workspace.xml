@@ -9,7 +9,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="208" column="17" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final/Fact Checking/BusinessTitlesFull.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,7 +100,6 @@
         <option value="$PROJECT_DIR$/Sentiments/UpDownSentiments.py" />
         <option value="$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv" />
         <option value="$PROJECT_DIR$/Sentiments/UpsDowns.py" />
-        <option value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
         <option value="$PROJECT_DIR$/Sentiments/Objectivity.py" />
         <option value="$PROJECT_DIR$/Sentiments/SentimentFakeNews.py" />
         <option value="$PROJECT_DIR$/Similar News/word2vec.py" />
@@ -92,6 +109,7 @@
         <option value="$PROJECT_DIR$/Datasets Preparation/scrapper.py" />
         <option value="$PROJECT_DIR$/Datasets Preparation/DatasetsUnification.py" />
         <option value="$PROJECT_DIR$/News-classification/Classifier2.py" />
+        <option value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
       </list>
     </option>
   </component>
@@ -129,7 +147,30 @@
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
+              <item name="Fact Checking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
+              <item name="News-classification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
+              <item name="Objectivity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
               <item name="Numbers Meaning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Sentiments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -143,18 +184,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Fact Checking" />
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Fact Checking" />
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -321,6 +362,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3348329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -365,20 +407,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/ops/array_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="1255" selection-start-line="1255" selection-end-line="1255" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/util/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="179" column="19" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/keras_self_attention/seq_self_attention.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
@@ -633,16 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sentiments/Vocabulary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -703,7 +721,7 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final/Objectivity/News_Sources_Analysis_Who_Said.ipynb">
+    <entry file="file://$PROJECT_DIR$/Final/Objectivity/Objectivity_Who_Said.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
@@ -799,6 +817,25 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Fact Checking/CompaniesWithNumbers.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="208" column="17" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Fact Checking/BusinessTitlesFull.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
   </component>
 </project>
