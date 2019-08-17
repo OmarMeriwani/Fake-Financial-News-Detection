@@ -1,16 +1,10 @@
 import numpy as np
 from string import punctuation
-from os import listdir
 import pandas as pd
 from numpy import zeros
-from numpy import asarray
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential, Model
-from keras.layers import Dense
-import keras.regularizers
-from keras.layers import Flatten
-from keras.layers import Embedding
 from gensim.models import KeyedVectors
 from gensim.test.utils import datapath
 from sklearn.model_selection import train_test_split
@@ -19,50 +13,19 @@ from keras.layers import Dense, Dropout, Flatten, Input, MaxPooling1D, Convoluti
 from keras.layers.merge import Concatenate
 from Vocabulary import clean_doc
 from keras.utils import np_utils
-from keras.layers import LSTM
-from keras.layers import Bidirectional
-import tensorflow as tf
-from keras.callbacks import  EarlyStopping
-from keras.layers import RepeatVector
 import os
 from stanfordcorenlp import StanfordCoreNLP
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
-
 java_path = "C:/Program Files/Java/jdk1.8.0_161/bin/java.exe"
 os.environ['JAVAHOME'] = java_path
 host='http://localhost'
 port=9000
 scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
-
 stemmer = PorterStemmer()
 
-def load_doc(filename):
-    # open the file as read only
-    file = open(filename, 'r')
-    # read all text
-    text = file.read()
-    # close the file
-    file.close()
-    return text
-
-
-def doc_to_clean_lines(doc, vocab):
-    clean_lines = ''
-    lines = doc.splitlines()
-    for line in lines:
-        clean_lines = ' '.join(clean_doc(line))
-    return clean_lines
-
-
-# load the vocabulary
-vocab_filename = 'vocabulary.txt'
-vocab = load_doc(vocab_filename)
-vocab = vocab.split()
-vocab = set(vocab)
-vocab = [v.lower() for v in vocab]
 
 
 def get_weight_matrix2(embedding, vocab):
@@ -151,7 +114,6 @@ def readfile(filename):
             effect = 1
         else:
             effect = 0
-        #sentence = doc_to_clean_lines(sentence,vocab)
         if sentence.strip() != '':
             data.loc[seq] = [sentence,effect]
             print(sentence, effect)
