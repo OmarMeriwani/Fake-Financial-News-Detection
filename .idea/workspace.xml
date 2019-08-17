@@ -9,44 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Datasets Preparation/MainNER.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Datasets Preparation/DatasetsUnification.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="133" selection-start-line="125" selection-end-line="133" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,12 +128,13 @@
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
               <item name="Final" type="462c0819:PsiDirectoryNode" />
-              <item name="Objectivity" type="462c0819:PsiDirectoryNode" />
+              <item name="News-classification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
-              <item name="News-classification" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
+              <item name="Objectivity" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -191,11 +155,11 @@
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Sources" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -362,7 +326,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3348329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -836,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Datasets Preparation/DatasetsUnification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="133" selection-start-line="125" selection-end-line="133" />
+        <state relative-caret-position="669">
+          <caret line="159" column="30" selection-start-line="133" selection-end-line="159" selection-end-column="30" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
