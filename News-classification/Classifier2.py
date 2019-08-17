@@ -1,9 +1,7 @@
 import re
-import numpy as np
 import pandas as pd
 from nltk.corpus import stopwords
 from string import punctuation
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
