@@ -1,25 +1,9 @@
 import pandas as pd
 pd.options.mode.chained_assignment = None
-import numpy as np
-from string import punctuation
-from nltk.corpus import stopwords
-from sklearn.svm import LinearSVC
-from nltk.stem import WordNetLemmatizer
-from tqdm import tqdm
 from sklearn.neural_network import MLPClassifier
-from keras.models import Sequential
-from stanfordcorenlp import StanfordCoreNLP
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import MultinomialNB
-import os
-from nltk.stem.porter import *
-from nltk.tokenize import TweetTokenizer # a tweet tokenizer from nltk.
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
-from keras.layers import Dense
 
-#df = pd.read_csv('Resources.csv',header=0)
-#id,title,author,text,label
 df = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/Kaggle Competition/train.csv',header=0)
 data = []
 labels = []

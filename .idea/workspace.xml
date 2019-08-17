@@ -22,6 +22,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sources/NewsSourceAnalysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Similar News/word2vec.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="635">
@@ -164,7 +173,6 @@
         <option value="$PROJECT_DIR$/Sentiments/UpDownSentiments.py" />
         <option value="$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv" />
         <option value="$PROJECT_DIR$/Sentiments/Objectivity.py" />
-        <option value="$PROJECT_DIR$/Sources/NewsSourceAnalysis.py" />
         <option value="$PROJECT_DIR$/Citations/Features.py" />
         <option value="$PROJECT_DIR$/Citations/Objectivity.py" />
         <option value="$PROJECT_DIR$/Datasets Preparation/scrapper.py" />
@@ -175,6 +183,7 @@
         <option value="$PROJECT_DIR$/Final/Sentiment Analysis.py" />
         <option value="$PROJECT_DIR$/Sentiments/SentimentFakeNews.py" />
         <option value="$PROJECT_DIR$/Similar News/word2vec.py" />
+        <option value="$PROJECT_DIR$/Sources/NewsSourceAnalysis.py" />
       </list>
     </option>
   </component>
@@ -647,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/NewsSourceAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="61" column="70" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Citations/parsers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -907,6 +909,13 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/NewsSourceAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
