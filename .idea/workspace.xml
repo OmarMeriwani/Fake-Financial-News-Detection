@@ -10,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
@@ -19,14 +19,6 @@
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis/FakeNewsSA.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
         </entry>
       </file>
@@ -213,6 +205,12 @@
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
               <item name="Final" type="462c0819:PsiDirectoryNode" />
               <item name="Objectivity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
+              <item name="Sentiment Analysis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
@@ -414,6 +412,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3348329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -458,13 +457,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/keras/legacy/interfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sentiments/SSIX News headlines Gold Standard EN.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -862,6 +854,19 @@
     <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis/FakeNewsSA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis/Sentiment_Analysis.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -870,12 +875,6 @@
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis/FakeNewsSA.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
   </component>
