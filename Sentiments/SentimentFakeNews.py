@@ -1,43 +1,44 @@
 import numpy as np
 from string import punctuation
-from os import listdir
 import pandas as pd
 from numpy import zeros
-from numpy import asarray
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential, Model
-from keras.layers import Dense
-import keras.regularizers
-from keras.layers import Flatten
-from keras.layers import Embedding
 from gensim.models import KeyedVectors
 from gensim.test.utils import datapath
 from sklearn.model_selection import train_test_split
 from nltk.stem.porter import *
 from keras.layers import Dense, Dropout, Flatten, Input, MaxPooling1D, Convolution1D, Embedding, GlobalMaxPooling1D
 from keras.layers.merge import Concatenate
-from Vocabulary import clean_doc
 from keras.utils import np_utils
-from keras.layers import LSTM
-from keras.layers import Bidirectional
-import tensorflow as tf
-from keras.callbacks import  EarlyStopping
-from keras.layers import RepeatVector
 import os
 from stanfordcorenlp import StanfordCoreNLP
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
-
 java_path = "C:/Program Files/Java/jdk1.8.0_161/bin/java.exe"
 os.environ['JAVAHOME'] = java_path
 host='http://localhost'
 port=9000
 scnlp =StanfordCoreNLP(host, port=port,lang='en', timeout=30000)
-
 stemmer = PorterStemmer()
+
+def clean_doc(doc):
+    doc = doc.encode('ascii', errors='ignore').decode("utf-8")
+    # split into tokens by white space
+    tokens = doc.split()
+    # remove punctuation from each token
+    table = str.maketrans('', '', punctuation)
+    tokens = [w.translate(table) for w in tokens]
+    # filter out stop words
+    stop_words = set(stopwords.words('english'))
+    tokens = [w for w in tokens if not w in stop_words]
+    # filter out short tokens
+    tokens = [lemmatizer.lemmatize(word.lower()) for word in tokens if len(word) > 1 and str(word).isalpha() == True ]
+    return tokens
+
 
 def get_weight_matrix2(embedding, vocab):
     vocab_size2 = len(vocab) + 1

@@ -11,6 +11,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="206" selection-start-line="196" selection-end-line="206" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis/FakeNewsSA.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -34,13 +54,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sentiments/Vocabulary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-end-line="16" />
+            <state relative-caret-position="482">
+              <caret line="45" selection-start-line="30" selection-end-line="45" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sentiments/UpDownSentiments.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,7 +151,6 @@
         <option value="$PROJECT_DIR$/Sentiments/UpDownSentiments.py" />
         <option value="$PROJECT_DIR$/Numbers Meaning/CompaniesWithNumbers.csv" />
         <option value="$PROJECT_DIR$/Sentiments/Objectivity.py" />
-        <option value="$PROJECT_DIR$/Sentiments/SentimentFakeNews.py" />
         <option value="$PROJECT_DIR$/Similar News/word2vec.py" />
         <option value="$PROJECT_DIR$/Sources/NewsSourceAnalysis.py" />
         <option value="$PROJECT_DIR$/Citations/Features.py" />
@@ -129,6 +160,8 @@
         <option value="$PROJECT_DIR$/News-classification/Classifier2.py" />
         <option value="$PROJECT_DIR$/Numbers Meaning/NumbersTitlesDataset.py" />
         <option value="$PROJECT_DIR$/Sentiments/UpsDowns.py" />
+        <option value="$PROJECT_DIR$/Final/Sentiment Analysis.py" />
+        <option value="$PROJECT_DIR$/Sentiments/SentimentFakeNews.py" />
       </list>
     </option>
   </component>
@@ -203,18 +236,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Sentiment Analysis" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Fact Checking" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Fact Checking" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -381,7 +414,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3348329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -426,20 +458,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/keras/backend/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/keras/optimizers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="474" selection-start-line="474" selection-end-line="474" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/keras/legacy/interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -454,16 +472,6 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="10" selection-start-column="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentiments/UpDownSentiments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="130" column="34" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -643,16 +651,6 @@
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="54230">
           <caret line="3190" column="29" selection-start-line="3190" selection-start-column="29" selection-end-line="3190" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="192" column="31" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,14 +839,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sentiments/UpDownSentiments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sentiments/Vocabulary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-end-line="16" />
+        <state relative-caret-position="482">
+          <caret line="45" selection-start-line="30" selection-end-line="45" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sentiments/SentimentFakeNews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="206" selection-start-line="196" selection-end-line="206" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Sentiment Analysis/FakeNewsSA.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
   </component>
