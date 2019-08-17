@@ -14,7 +14,18 @@
         <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/News-classification/Classifier2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-end-line="118" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -23,10 +34,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/News-classification/Classifier2.py">
+        <entry file="file://$PROJECT_DIR$/Market/uniqueNames.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="13" lean-forward="true" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="656">
+              <caret line="60" column="36" selection-start-line="55" selection-end-line="60" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,24 +154,18 @@
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
+              <item name="Final" type="462c0819:PsiDirectoryNode" />
               <item name="Datasets Preparation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
               <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
-              <item name="Final" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
-              <item name="Final" type="462c0819:PsiDirectoryNode" />
-              <item name="News-classification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fake-Financial-News-Detection" type="462c0819:PsiDirectoryNode" />
-              <item name="Final" type="462c0819:PsiDirectoryNode" />
-              <item name="Objectivity" type="462c0819:PsiDirectoryNode" />
+              <item name="Market" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Fake-Financial-News-Detection" type="b2602c69:ProjectViewProjectNode" />
@@ -176,18 +184,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\News-classification" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Datasets Preparation" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Final\Objectivity" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Citations" />
       <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Datasets Preparation" />
-      <recent name="C:\Users\Omar\Documents\GitHub\Fake-Financial-News-Detection\Sources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -399,16 +407,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/_api/v1/nn/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/ops/gen_array_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="1280" column="36" selection-end-line="17408" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/ops/array_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
@@ -498,16 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="830" column="8" selection-start-line="830" selection-start-column="8" selection-end-line="830" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Market/uniqueNames.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,17 +807,38 @@
     <entry file="file://$PROJECT_DIR$/News-classification/FinancialNewsClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final/News-classification/uci-news-aggregator.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/News-classification/Classifier2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="true" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="629">
+          <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-end-line="118" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final/Datasets Preparation/symbols.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Market/uniqueNames.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="60" column="36" selection-start-line="55" selection-end-line="60" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
