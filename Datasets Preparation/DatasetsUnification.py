@@ -5,13 +5,12 @@ from urllib.parse import urlparse
 from dateutil.parser import parse
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
-sys.path.insert(0, 'C:/Users/Omar/Documents/GitHub/Fake-Financial-News-Detection/')
 from preprocessing import normalize_text
 print('Started data unification...')
 
 df_main = pd.DataFrame(columns=['claim', 'type', 'label', 'date','sources'])
 print('Reading snopes dataset...')
-df_snopes = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/rumor-citation/snopes.csv')
+df_snopes = pd.read_csv('snopes.csv')
 '''
 0. snopes_page, 1. topic, 2. claim, 3. claim_label, 4. date_published, 5. date_updated, 6. page_url,page_is_example,page_is_image_credit,page_is_archived,page_is_first_citation,tags
 topic (business), claim, claim_label (FALSE, TRUE, mfalse, mtrue), date_published, page_url
@@ -53,19 +52,6 @@ for i in range(0, len(df_snopes)):
         mainseq += 1
 print(df_main)
 
-'''
-def getReadyVocabulary():
-    atokens = []
-    dfVocab = pd.read_csv('../News-classification/vocab.csv')
-    for i in range(0,len(dfVocab)):
-        sentence = dfVocab.loc[i][1]
-        #print(sentence)
-        atokens.append(sentence)
-    atokens = set(atokens)
-    return atokens
-vocab = getReadyVocabulary()
-
-print(vocab)'''
 print('Getting vocabulary...')
 vec = CountVectorizer(vocabulary=pickle.load(open('../News-classification/vocab.pkl', 'rb')))
 
@@ -80,7 +66,7 @@ emergent.csv
 '''
 
 print('Getting emergent.csv dataset...')
-df_emergent = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/rumor-citation/emergent.csv')
+df_emergent = pd.read_csv('emergent.csv')
 df_emergent_pred = pd.DataFrame(columns=['claim'])
 seq = 0
 for i in range(0, len(df_emergent)):
@@ -100,14 +86,12 @@ seq = 0
 previous = ''
 sources = ''
 for i in range(0, len(df_emergent)):
-    #1.claim, 3.claim_label (FALSE, TRUE), 5.claim_source_domain, 7.date
     claim = str(df_emergent.loc[i].values[1]).replace('Claim: ','')
     topic = y2[i]
     if topic != 0:
         continue
     date = df_emergent.loc[i].values[7]
     dt = parse(date)
-    #print('DATE: ',date, dt.date())
     label = df_emergent.loc[i].values[3]
     parsed_uri = urlparse(str(df_emergent.loc[i].values[10]) )
     result = '{uri.netloc}'.format(uri=parsed_uri)
@@ -120,10 +104,6 @@ for i in range(0, len(df_emergent)):
         sources = ''
         previous = claim
         mainseq += 1
-#x2 = vec.fit_transform(df_main['claim'])
-#y2 = mlp.predict(x2)
-#for i in range(0,x2.shape[0]):
-#    print(df_main.loc[i][0],y2[i])
 
 '''
 politifact.csv
@@ -134,7 +114,7 @@ politifact.csv
 '''
 
 print('Getting politifact.csv dataset...')
-df_politifact = pd.read_csv('C:/Users/Omar/Documents/MSc Project/Datasets/rumor-citation/politifact.csv')
+df_politifact = pd.read_csv('politifact.csv')
 df_politifact_pred = pd.DataFrame(columns=['claim'])
 seq = 0
 for i in range(0, len(df_politifact)):
